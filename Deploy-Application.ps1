@@ -164,13 +164,13 @@ Try {
 		[string]$installPhase = 'Pre-Uninstallation'
 
 		## Show Welcome Message, close Internet Explorer with a 60 second countdown before automatically closing
-		Show-InstallationWelcome -CloseApps 'DellCommandUpdate' -CloseAppsCountdown 60
+		Show-InstallationWelcome -CloseApps 'DellCommandUpdatereg' -CloseAppsCountdown 60
 
 		## Show Progress Message (with the default message)
 		Show-InstallationProgress
 
 		## <Perform Pre-Uninstallation tasks here>
-		$exitCode = Execute-MSI -Action Uninstall -Path '{54AF0B07-2A7E-4EAA-9E03-36407D80BA73}'
+		$exitCode = Execute-MSI -Action Uninstall -Path '{5669AB71-1302-4412-8DA1-CB69CD7B7324}'
 		Start-Sleep -s 10
 		If (($exitCode.ExitCode -ne "0") -and ($mainExitCode -ne "3010")) { $mainExitCode = $exitCode.ExitCode }
 
