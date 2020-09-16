@@ -170,9 +170,6 @@ Try {
 		Show-InstallationProgress
 
 		## <Perform Pre-Uninstallation tasks here>
-		$exitCode = Execute-MSI -Action Uninstall -Path '{5669AB71-1302-4412-8DA1-CB69CD7B7324}'
-		Start-Sleep -s 10
-		If (($exitCode.ExitCode -ne "0") -and ($mainExitCode -ne "3010")) { $mainExitCode = $exitCode.ExitCode }
 
 
 		##*===============================================
@@ -187,6 +184,9 @@ Try {
 		}
 
 		# <Perform Uninstallation tasks here>
+		$exitCode = Execute-MSI -Action Uninstall -Path '{5669AB71-1302-4412-8DA1-CB69CD7B7324}'
+		Start-Sleep -s 10
+		If (($exitCode.ExitCode -ne "0") -and ($mainExitCode -ne "3010")) { $mainExitCode = $exitCode.ExitCode }
 
 
 		##*===============================================
