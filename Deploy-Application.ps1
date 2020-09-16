@@ -67,12 +67,12 @@ Try {
 	## Variables: Application
 	[string]$appVendor = 'Dell'
 	[string]$appName = 'Command | Update'
-	[string]$appVersion = '3.1.3'
+	[string]$appVersion = '3.1.2'
 	[string]$appArch = 'x64'
 	[string]$appLang = 'EN'
 	[string]$appRevision = '01'
 	[string]$appScriptVersion = '1.0.0'
-	[string]$appScriptDate = '09/01/2020'
+	[string]$appScriptDate = '09/16/2020'
 	[string]$appScriptAuthor = 'James Hardy'
 	##*===============================================
 	## Variables: Install Titles (Only set here to override defaults set by the toolkit)
